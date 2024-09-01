@@ -35,7 +35,7 @@ jobs:
               - "!.devcontainer/**"
 
       - name: Run test
-        if: steps.filter.outputs.ignore-paths == 'true'
+        if: steps.filter.outputs.ignore-paths != 'true'
         uses: ./.github/workflows/action/
 
       - name: Save job status
