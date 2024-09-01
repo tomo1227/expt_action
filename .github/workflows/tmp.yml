@@ -1,0 +1,54 @@
+name: Test
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  changes:
+    runs-on: ubuntu-latest
+
+    permissions:
+      pull-requests: read
+
+    outputs:
+      need-run-test: ${{ steps.filter.outputs.need-run-test }}
+
+    steps:
+      - name: Checkout
+        if: github.event_name == 'push'
+        uses: actions/checkout@v4
+
+      - name: Filter paths
+        uses: dorny/paths-filter@v3
+        id: filter
+        with:
+          predicate-quantifier: every
+          filters: |
+            need-run-test:
+              - "!**.md"
+              - "!.vscode/**"
+              - "!.devcontainer/**"
+
+  run-test:
+    needs: changes
+
+    if: ${{ needs.changes.outputs.need-run-test == 'true' }}
+
+    runs-on: ubuntu-latest
+
+    container:
+      image: golang:latest
+
+    steps:
+      # ワークフローの可視化
+      - uses: Kesin11/actions-timeline@v2
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Save job status
+        if: always()
+        run: echo "${{ job.status }}" > run-test-status
