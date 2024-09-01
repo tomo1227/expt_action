@@ -113,23 +113,6 @@
     "gofmt",
     "gomod"
   ],
-  "todo-tree.general.tags": [
-    "HACK",
-    "FIXME",
-    "TODO",
-    "XXX",
-    "REVIEW",
-    "OPTIMIZE",
-    "CHANGED",
-    "NOTE",
-    "WARNING"
-  ],
-  "todo-tree.highlights.defaultHighlight": {
-    "foreground": "#000000",
-    "background": "#2C7CFF",
-    "iconColor": "#24ff41",
-    "opacity": 45
-  },
   "cSpell.ignorePaths": [
     ".vscode",
     ".devcontainer/devcontainer.json",
