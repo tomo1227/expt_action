@@ -1,0 +1,7 @@
+name: Run test
+
+runs:
+    steps:
+        - name: Echo
+          run: echo "Test Success!!!!"
+          shell: bash
