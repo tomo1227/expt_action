@@ -41,4 +41,3 @@ jobs:
       - name: Save job status
         if: always()
         run: echo "${{ job.status }}" > run-test-status
-
