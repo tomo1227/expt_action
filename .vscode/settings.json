@@ -130,43 +130,6 @@
     "iconColor": "#24ff41",
     "opacity": 45
   },
-  "todo-tree.highlights.customHighlight": {
-    "HACK": {
-      "icon": "zap"
-    },
-    "FIXME": {
-      "icon": "flame",
-      "background": "#f11e1e",
-      "iconColor": "#f11e1e"
-    },
-    "TODO": {
-      "icon": "check-circle"
-    },
-    "XXX": {
-      "icon": "x-circle",
-      "background": "#f8831d",
-      "iconColor": "#f8831d"
-    },
-    "REVIEW": {
-      "icon": "pin"
-    },
-    "OPTIMIZE": {
-      "icon": "rocket",
-      "background": "#f8831d",
-      "iconColor": "#f8831d"
-    },
-    "CHANGED": {
-      "icon": "issue-reopened"
-    },
-    "NOTE": {
-      "icon": "thumbsup"
-    },
-    "WARNING": {
-      "icon": "alert",
-      "background": "#f11e1e",
-      "iconColor": "#f11e1e"
-    }
-  },
   "cSpell.ignorePaths": [
     ".vscode",
     ".devcontainer/devcontainer.json",
