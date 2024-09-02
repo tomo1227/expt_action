@@ -9,9 +9,6 @@ on:
         options: 
         - foo
         - hoge
-# env:
-#   AUTH_TOKEN_PROD_RESOURCE_CREATOR: ${{ secrets.AUTH_TOKEN_PROD_RESOURCE_CREATOR }}
-#   PROJECT_ROOT_DIR: ${{ github.workspace }}
 
 jobs:
   run-test:
