@@ -21,4 +21,4 @@ jobs:
 
       - name: Run test
         run: |
-          AAA=${{ github.event.inputs.env}} runn run runn/a.yml
+          AAA=${{ github.event.inputs.env}} runn run runn/a.yml -debug
