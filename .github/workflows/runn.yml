@@ -6,7 +6,13 @@ on:
       - main
   pull_request:
   workflow_dispatch:
-
+    inputs:
+      env:
+        type: choice
+        description: Choose Env
+        options: 
+        - foo
+        - hoge
 # env:
 #   AUTH_TOKEN_PROD_RESOURCE_CREATOR: ${{ secrets.AUTH_TOKEN_PROD_RESOURCE_CREATOR }}
 #   PROJECT_ROOT_DIR: ${{ github.workspace }}
@@ -22,5 +28,4 @@ jobs:
 
       - name: Run test
         run: |
-          pwd
-          runn run runn/hello.yml
+          AAA=${{ github.event.inputs.env}} runn run runn/hello.yml
