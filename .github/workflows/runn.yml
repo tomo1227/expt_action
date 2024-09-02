@@ -1,10 +1,6 @@
 name: Run scenario tests
 
 on:
-  push:
-    branches:
-      - main
-  pull_request:
   workflow_dispatch:
     inputs:
       env:
@@ -28,4 +24,4 @@ jobs:
 
       - name: Run test
         run: |
-          AAA=${{ github.event.inputs.env}} runn run runn/hello.yml
+          AAA=${{ github.event.inputs.env}} runn run runn/a.yml
