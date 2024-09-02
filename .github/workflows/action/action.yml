@@ -1,0 +1,10 @@
+name: Run test
+
+runs:
+    using: "composite"
+    steps:
+        - name: Checkout
+          uses: actions/checkout@v4
+        - name: Echo
+          run: echo "Test Success!!!!"
+          shell: bash

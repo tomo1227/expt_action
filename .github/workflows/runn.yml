@@ -1,0 +1,27 @@
+name: Run scenario tests
+
+on:
+  workflow_dispatch:
+    inputs:
+      env:
+        type: choice
+        description: Choose Env
+        options: 
+        - foo
+        - hoge
+# env:
+#   AUTH_TOKEN_PROD_RESOURCE_CREATOR: ${{ secrets.AUTH_TOKEN_PROD_RESOURCE_CREATOR }}
+#   PROJECT_ROOT_DIR: ${{ github.workspace }}
+
+jobs:
+  run-test:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/k1low/runn
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run test
+        run: |
+          AAA=${{ github.event.inputs.env}} runn run runn/a.yml
