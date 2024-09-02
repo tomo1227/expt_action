@@ -6,5 +6,5 @@ steps:
   hello:
     desc: わーい
     exec:
-      command: echo "{{ vars.a }"
+      command: echo '{{ vars.a }'
       shell: bash
