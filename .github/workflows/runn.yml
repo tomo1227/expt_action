@@ -9,9 +9,6 @@ on:
         options: 
         - foo
         - hoge
-# env:
-#   AUTH_TOKEN_PROD_RESOURCE_CREATOR: ${{ secrets.AUTH_TOKEN_PROD_RESOURCE_CREATOR }}
-#   PROJECT_ROOT_DIR: ${{ github.workspace }}
 
 jobs:
   run-test:
@@ -24,4 +21,4 @@ jobs:
 
       - name: Run test
         run: |
-          AAA=${{ github.event.inputs.env}} runn run runn/a.yml
+          AAA=${{ github.event.inputs.env}} runn run runn/a.yml --debug --scopes run:exec

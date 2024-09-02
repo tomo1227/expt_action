@@ -4,5 +4,7 @@ vars:
 
 steps:
   hello:
-    desc: サーバー作成
-    dump: "{{ vars.a }"
+    desc: わーい
+    exec:
+      command: echo {{ vars.a }}
+      shell: bash
