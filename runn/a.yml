@@ -5,4 +5,4 @@ vars:
 steps:
   foo:
     desc: foo
-    dump: "{{ vars.a }"
+    dump: vars.a
