@@ -37,7 +37,3 @@ jobs:
       - name: Run test
         if: steps.filter.outputs.ignore-paths == true
         uses: ./.github/workflows/action/
-
-      - name: Save job status
-        if: always()
-        run: echo "${{ job.status }}" > run-test-status
