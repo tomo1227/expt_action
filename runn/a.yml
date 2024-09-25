@@ -1,8 +1,8 @@
 desc: サーバーのライフサイクルのシナリオ
 vars:
-  a: ${AAA}
+  a: ${FOO}
 
 steps:
-  hello:
-    desc: サーバー作成
+  foo:
+    desc: foo
     dump: "{{ vars.a }"
